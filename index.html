@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploader</title>
+    <link rel="shortcut icon" href="./assets/images/uploader.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script> 
+</head>
+<body>
+    <div class="body-blackout"></div>
+
+    <h1>All Image Uploader</h1> 
+    <div class="conta">
+        <div class="loader"></div>
+        <h2>loading...</h2> 
+    </div>
+        
+    
+    <div class="container" >
+        
+        <div class="overlay" > 
+            <img class="cropped" src="" alt=""  >
+            <img class="cropped-upper" src="" alt=""  >
+            <input type="file" id="drop-zone" accept="image/*" hidden  ondragover="drag()" ondrop="drop()" >
+            <div class="underlay">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <div class="text">Drag and Drop To Upload!</div>
+            </div>
+        </div>
+        
+        <div class="slab" style="position: absolute;width: 120%;left: -10%;"> 
+            <input type="file" id="inp-box" accept="image/*" hidden />
+            <div class="flexer" style="display: flex;flex-direction: row;justify-content: center; align-items: center;width: 100%;">
+                <button id="upload-btn" class="btns">Select a File</button>
+                <button id="upload-btn2" class="btns">Crop </button>
+                <button id="upload-btn3" class="btns">Save to Database</button>
+            </div>
+             
+        </div> 
+    </div>
+    <div  class="popup-modal shadow"  data-popup-modal="one" >
+        <i class="fas fa-2x fa-times closer  popup-modal__close"></i>
+        <div class="boxer">
+            <h2 class="font-weight-bold"> Congrats your Image has been successfully uploaded to our Database. </h2>
+            <a class="get-link" href="#" target="_blank">Get Link</a>
+        </div>
+        
+    </div> 
+ </body>
+<script src="./script/main.js"></script>
+
+</html>
